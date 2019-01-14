@@ -6,7 +6,31 @@
     color: white;
 }
 
+.button {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+#green {
+    background-color: green;
+}
+
+#red {
+    background-color: red;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+
 body {
     background-image: url("../images/background.png");
     background-repeat: no-repeat;
+    background-size: cover;
 }
