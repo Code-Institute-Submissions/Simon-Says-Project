@@ -1,9 +1,21 @@
-let simonList = [];
+// CONSTANTS AND VARIABLES
 
-let audio1 = new Audio('../audio/simonSound1.mp3');
-let audio2 = new Audio('../audio/simonSound2.mp3');
-let audio3 = new Audio('../audio/simonSound3.mp3');
-let audio4 = new Audio('../audio/simonSound4.mp3');
+let gameMemory = [];
+
+const audio1 = new Audio('../audio/simonSound1.mp3');
+const audio2 = new Audio('../audio/simonSound2.mp3');
+const audio3 = new Audio('../audio/simonSound3.mp3');
+const audio4 = new Audio('../audio/simonSound4.mp3');
+const audio5 = new Audio('../audio/Game_Failure_Sound.mp3');
+
+function repeatSequence(){
+    if (gameMemory = true) {
+        gameMemory.repeatSequence(2);
+    }
+    else {audio5.play();}    
+}
+
+// EXPERIMENTAL DIV FOR TESTING OUT THE FUNCTIONALITY OF JQUERY
 
 $(".experimental").mouseenter(function() {
     $(this).css("background-color", "yellow");
@@ -17,8 +29,8 @@ $(".experimental").mouseleave(function() {
 
 $("#green").click(function() {
     console.log("PRESS GREEN");
-    simonList.push("green");
-    console.log(simonList);
+    gameMemory.push("green");
+    console.log(gameMemory);
     audio1.play();
 });
 
@@ -34,8 +46,8 @@ $('#green').mouseup(function() {
 
 $("#blue").click(function() {
     console.log("PRESS BLUE");
-    simonList.push("blue");
-    console.log(simonList);
+    gameMemory.push("blue");
+    console.log(gameMemory);
     audio2.play();
 });
 
@@ -80,3 +92,13 @@ $('#red').mousedown(function() {
 $('#red').mouseup(function() {
     $(this).css("background-color", "red");
 });
+
+// GAME FUNCTIONS
+$('container').children().click(function() {
+    repeatSequence();
+});
+
+
+
+
+
