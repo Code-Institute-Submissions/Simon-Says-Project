@@ -2,18 +2,13 @@
 
 let gameMemory = [];
 
+let panels = ['red']
+
 const audio1 = new Audio('../audio/simonSound1.mp3');
 const audio2 = new Audio('../audio/simonSound2.mp3');
 const audio3 = new Audio('../audio/simonSound3.mp3');
 const audio4 = new Audio('../audio/simonSound4.mp3');
 const audio5 = new Audio('../audio/Game_Failure_Sound.mp3');
-
-function repeatSequence(){
-    if (gameMemory = true) {
-        gameMemory.repeatSequence(2);
-    }
-    else {audio5.play();}    
-}
 
 // EXPERIMENTAL DIV FOR TESTING OUT THE FUNCTIONALITY OF JQUERY
 
@@ -25,80 +20,76 @@ $(".experimental").mouseleave(function() {
     $(this).css("background-color", "red");
 });
 
-// GREEN BUTTON FUNCTIONS
+// // GREEN BUTTON FUNCTIONS
 
-$("#green").click(function() {
-    console.log("PRESS GREEN");
-    gameMemory.push("green");
-    console.log(gameMemory);
-    audio1.play();
-});
+// $("#green").click(function() {
+//     console.log("PRESS BLUE");
+//     gameMemory.push("blue");
+//     console.log(gameMemory);
+//     audio1.play();
+// });
 
-$('#green').mousedown(function() {
-    $(this).css("background-color", "black");
-});
+// $('#green').mousedown(function() {
+//     $(this).css("background-color", "black");
+// });
 
-$('#green').mouseup(function() {
-    $(this).css("background-color", "green");
-});
+// $('#green').mouseup(function() {
+//     $(this).css("background-color", "green");
+// });
 
-// BLUE BUTTON FUNCTIONS
+// // BLUE BUTTON FUNCTIONS
 
-$("#blue").click(function() {
-    console.log("PRESS BLUE");
-    gameMemory.push("blue");
-    console.log(gameMemory);
-    audio2.play();
-});
+// $("#blue").click(function() {
+//     console.log("PRESS BLUE");
+//     gameMemory.push("blue");
+//     console.log(gameMemory);
+//     audio2.play();
+// });
 
-$('#blue').mousedown(function() {
-    $(this).css("background-color", "black");
-});
+// $('#blue').mousedown(function() {
+//     $(this).css("background-color", "black");
+// });
 
-$('#blue').mouseup(function() {
-    $(this).css("background-color", "blue");
-});
+// $('#blue').mouseup(function() {
+//     $(this).css("background-color", "blue");
+// });
 
-// YELLOW BUTTON FUNCTIONS
+// // YELLOW BUTTON FUNCTIONS
 
-$("#yellow").click(function() {
-    console.log("PRESS YELLOW");
-    simonList.push("yellow");
-    console.log(simonList);
-    audio3.play();
-});
+// $("#yellow").click(function() {
+//     console.log("PRESS YELLOW");
+//     gameMemory.push("yellow");
+//     console.log(gameMemory);
+//     audio3.play();
+// });
 
-$('#yellow').mousedown(function() {
-    $(this).css("background-color", "black");
-});
+// $('#yellow').mousedown(function() {
+//     $(this).css("background-color", "black");
+// });
 
-$('#yellow').mouseup(function() {
-    $(this).css("background-color", "yellow");
-});
+// $('#yellow').mouseup(function() {
+//     $(this).css("background-color", "yellow");
+// });
 
-// RED BUTTON FUNCTIONS
+// // RED BUTTON FUNCTIONS
 
-$("#red").click(function() {
-    console.log("PRESS RED");
-    simonList.push("red");
-    console.log(simonList);
-    audio4.play();
-});
+// $("#red").click(function() {
+//     console.log("PRESS RED");
+//     gameMemory.push("red");
+//     console.log(gameMemory);
+//     audio4.play();
+// });
 
-$('#red').mousedown(function() {
-    $(this).css("background-color", "black");
-});
+// $('#red').mousedown(function() {
+//     $(this).css("background-color", "black");
+// });
 
-$('#red').mouseup(function() {
-    $(this).css("background-color", "red");
-});
+// $('#red').mouseup(function() {
+//     $(this).css("background-color", "red");
+// });
 
-// GAME FUNCTIONS
-$('container').children().click(function() {
-    repeatSequence();
-});
-
-
-
-
+// // GAME FUNCTIONS
+// function startGame() {
+//     if 
+// }
 

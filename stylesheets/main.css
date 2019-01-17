@@ -10,6 +10,7 @@
     width: 200px;
     height: 200px;
     border-radius: 100px;
+    cursor: pointer;
 }
 
 #green {
@@ -26,6 +27,19 @@
 
 #yellow {
     background-color: yellow;
+}
+
+.button {
+    background-color: grey;
+    color: white;
+    text-shadow: 10px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    padding-top: 37px;
+    margin-top: 10px;
+    border-radius: 50px;
+    cursor: pointer;
 }
 
 
