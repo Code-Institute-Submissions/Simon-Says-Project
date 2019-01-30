@@ -1,7 +1,8 @@
 // START GAME
 $(document).ready(function() {
     $('.start').click(function() {
-        
+        level++;
+        startGame()
     })
 })
 
@@ -17,13 +18,26 @@ const audio3 = new Audio('../audio/simonSound3.mp3');
 const audio4 = new Audio('../audio/simonSound4.mp3');
 const audio5 = new Audio('../audio/Game_Failure_Sound.mp3');
 
+let id = 0;
+let color = 0;
+let level = 0;
+
 let green = $('#green');
 let red = $('#red');
 let yellow = $('#yellow');
 let blue = $('#blue');
 
 // FUNCTIONS
-function startGame()
+
+// GAME SEQUENCE
+function startGame() {
+    $('.level-counter').text(level);
+}
+
+// GENERATE RANDOM NUMBERS
+function randomNumber() {
+    
+}
 
 // EXPERIMENTAL DIV FOR TESTING OUT THE FUNCTIONALITY OF JQUERY
 
