@@ -42,6 +42,16 @@
     cursor: pointer;
 }
 
+.level-counter {
+    background-color: beige;
+    height: 55px;
+    width: 186px;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 12px;
+    border: solid;
+    margin-bottom: 18px;
+}
 
 body {
     background-image: url("../images/background.png");

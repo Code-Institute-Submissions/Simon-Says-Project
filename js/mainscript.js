@@ -1,3 +1,10 @@
+// START GAME
+$(document).ready(function() {
+    $('.start').click(function() {
+        
+    })
+})
+
 // CONSTANTS AND VARIABLES
 
 let gameMemory = [];
@@ -10,6 +17,14 @@ const audio3 = new Audio('../audio/simonSound3.mp3');
 const audio4 = new Audio('../audio/simonSound4.mp3');
 const audio5 = new Audio('../audio/Game_Failure_Sound.mp3');
 
+let green = $('#green');
+let red = $('#red');
+let yellow = $('#yellow');
+let blue = $('#blue');
+
+// FUNCTIONS
+function startGame()
+
 // EXPERIMENTAL DIV FOR TESTING OUT THE FUNCTIONALITY OF JQUERY
 
 $(".experimental").mouseenter(function() {
@@ -20,76 +35,13 @@ $(".experimental").mouseleave(function() {
     $(this).css("background-color", "red");
 });
 
-// // GREEN BUTTON FUNCTIONS
+function flash() {
+    $("panels").mousedown(function() {
+        $(this).css("background-color", "black");
+    });
+}
 
-// $("#green").click(function() {
-//     console.log("PRESS BLUE");
-//     gameMemory.push("blue");
-//     console.log(gameMemory);
-//     audio1.play();
-// });
-
-// $('#green').mousedown(function() {
-//     $(this).css("background-color", "black");
-// });
-
-// $('#green').mouseup(function() {
-//     $(this).css("background-color", "green");
-// });
-
-// // BLUE BUTTON FUNCTIONS
-
-// $("#blue").click(function() {
-//     console.log("PRESS BLUE");
-//     gameMemory.push("blue");
-//     console.log(gameMemory);
-//     audio2.play();
-// });
-
-// $('#blue').mousedown(function() {
-//     $(this).css("background-color", "black");
-// });
-
-// $('#blue').mouseup(function() {
-//     $(this).css("background-color", "blue");
-// });
-
-// // YELLOW BUTTON FUNCTIONS
-
-// $("#yellow").click(function() {
-//     console.log("PRESS YELLOW");
-//     gameMemory.push("yellow");
-//     console.log(gameMemory);
-//     audio3.play();
-// });
-
-// $('#yellow').mousedown(function() {
-//     $(this).css("background-color", "black");
-// });
-
-// $('#yellow').mouseup(function() {
-//     $(this).css("background-color", "yellow");
-// });
-
-// // RED BUTTON FUNCTIONS
-
-// $("#red").click(function() {
-//     console.log("PRESS RED");
-//     gameMemory.push("red");
-//     console.log(gameMemory);
-//     audio4.play();
-// });
-
-// $('#red').mousedown(function() {
-//     $(this).css("background-color", "black");
-// });
-
-// $('#red').mouseup(function() {
-//     $(this).css("background-color", "red");
-// });
-
-// // GAME FUNCTIONS
-// function startGame() {
-//     if 
-// }
+$("panels").click(function() {
+    flash();
+});
 
