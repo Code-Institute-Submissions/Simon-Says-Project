@@ -37,7 +37,10 @@ function startGame() {
     randomNumber();
     let i = 0;
     let myInterval = setInterval(function() {
-        
+        id = gameMemory[i];
+        color = $('#'+id).attr("class").split(" ")[1];
+        console.log(id+" "+color);
+        addClassSound(id, color);
     }, 1000);
 }
 
@@ -45,6 +48,15 @@ function startGame() {
 function randomNumber() {
     let random = Math.floor(Math.random()* 4);
     gameMemory.push(random);
+}
+
+// ADD TEMPORARY CLASS AND SOUND
+function addClassSound(id, color){
+    $("#" + id).addClass(color+"active");
+    playSound
+    setTimeout(function() {
+        $("#"+id).removeClass(color+"-active")
+    }, 500);
 }
 
 // EXPERIMENTAL DIV FOR TESTING OUT THE FUNCTIONALITY OF JQUERY
