@@ -22,7 +22,7 @@ let gameSounds = [
     '../audio/simonSound2.mp3',
     '../audio/simonSound3.mp3',
     '../audio/simonSound4.mp3',
-    ];
+];
 
 let id = 0;
 let color = 0;
@@ -43,25 +43,35 @@ function startGame() {
     let i = 0;
     let myInterval = setInterval(function() {
         id = gameMemory[i];
-        color = $('#'+id).attr("class").split(" ")[1];
-        console.log(id+" "+color);
+        color = $('#' + id).attr("class").split(" ")[1];
+        console.log(id + " " + color);
         addClassSound(id, color);
+        i++;
+        if (i == gameMemory.length) {
+            clearInterval(myInterval);
+        }
     }, 1000);
 }
 
+
 // GENERATE RANDOM NUMBERS
 function randomNumber() {
-    let random = Math.floor(Math.random()* 4);
+    let random = Math.floor(Math.random() * 4);
     gameMemory.push(random);
 }
 
 // ADD TEMPORARY CLASS AND SOUND
-function addClassSound(id, color){
-    $("#" + id).addClass(color+"active");
-    playSound
+function addClassSound(id, color) {
+    $("#" + id).addClass(color + "active");
+    // playSound(id)
     setTimeout(function() {
-        $("#"+id).removeClass(color+"-active")
+        $("#" + id).removeClass(color + "-active")
     }, 500);
+}
+
+// PLAY GAME SOUNDS
+function playSound(id) {
+
 }
 
 // EXPERIMENTAL DIV FOR TESTING OUT THE FUNCTIONALITY OF JQUERY
@@ -83,4 +93,3 @@ function flash() {
 $("panels").click(function() {
     flash();
 });
-
