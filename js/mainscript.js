@@ -9,6 +9,7 @@ $(document).ready(function() {
 // CONSTANTS AND VARIABLES
 
 let gameMemory = [];
+let playerMemory = [];
 
 let panels = ['red']
 
@@ -31,12 +32,19 @@ let blue = $('.blue');
 
 // GAME SEQUENCE
 function startGame() {
+    console.log(level);
     $('.level-counter').text(level);
+    randomNumber();
+    let i = 0;
+    let myInterval = setInterval(function() {
+        
+    }, 1000);
 }
 
 // GENERATE RANDOM NUMBERS
 function randomNumber() {
-    
+    let random = Math.floor(Math.random()* 4);
+    gameMemory.push(random);
 }
 
 // EXPERIMENTAL DIV FOR TESTING OUT THE FUNCTIONALITY OF JQUERY
