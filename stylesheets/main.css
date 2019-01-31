@@ -36,12 +36,13 @@
     width: 100px;
     height: 100px;
     text-align: center;
-    padding-top: 37px;
+    padding-top: 32px;
     margin-top: 10px;
     border-radius: 50px;
     cursor: pointer;
     border: solid 4px;
     margin-bottom: 10px;
+    border-color: #000000;
 }
 
 .color {
