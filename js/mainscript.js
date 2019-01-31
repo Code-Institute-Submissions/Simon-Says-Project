@@ -11,13 +11,18 @@ $(document).ready(function() {
 let gameMemory = [];
 let playerMemory = [];
 
-let panels = ['red']
+// const audio1 = new Audio('../audio/simonSound1.mp3');
+// const audio2 = new Audio('../audio/simonSound2.mp3');
+// const audio3 = new Audio('../audio/simonSound3.mp3');
+// const audio4 = new Audio('../audio/simonSound4.mp3');
+// const audio5 = new Audio('../audio/Game_Failure_Sound.mp3');
 
-const audio1 = new Audio('../audio/simonSound1.mp3');
-const audio2 = new Audio('../audio/simonSound2.mp3');
-const audio3 = new Audio('../audio/simonSound3.mp3');
-const audio4 = new Audio('../audio/simonSound4.mp3');
-const audio5 = new Audio('../audio/Game_Failure_Sound.mp3');
+let gameSounds = [
+    '../audio/simonSound1.mp3',
+    '../audio/simonSound2.mp3',
+    '../audio/simonSound3.mp3',
+    '../audio/simonSound4.mp3',
+    ];
 
 let id = 0;
 let color = 0;
