@@ -8,7 +8,7 @@ $(document).ready(function() {
 
 // CONSTANTS AND VARIABLES
 
-let gameMemory = [];
+let gameMemory = [0, 2, 2];
 let playerMemory = [];
 
 // const audio1 = new Audio('../audio/simonSound1.mp3');
@@ -39,20 +39,19 @@ let blue = $('.blue');
 function startGame() {
     console.log(level);
     $('.level-counter').text(level);
-    randomNumber();
+    // randomNumber();
     let i = 0;
     let myInterval = setInterval(function() {
         id = gameMemory[i];
-        color = $('#' + id).attr("class").split(" ")[1];
-        console.log(id + " " + color);
+        color = $('#'+id).attr("class").split(" ")[1];
+        console.log(id+" "+color);
         addClassSound(id, color);
         i++;
-        if (i == gameMemory.length) {
+        if(i == gameMemory.length) {
             clearInterval(myInterval);
         }
     }, 1000);
 }
-
 
 // GENERATE RANDOM NUMBERS
 function randomNumber() {
@@ -62,10 +61,10 @@ function randomNumber() {
 
 // ADD TEMPORARY CLASS AND SOUND
 function addClassSound(id, color) {
-    $("#" + id).addClass(color + "active");
+    $("#"+id).addClass(color+"-active");
     // playSound(id)
     setTimeout(function() {
-        $("#" + id).removeClass(color + "-active")
+        $("#"+id).removeClass(color+"-active");
     }, 500);
 }
 

@@ -6,27 +6,44 @@
     color: white;
 }
 
-.color {
+.pad {
     width: 200px;
     height: 200px;
     border-radius: 100px;
     cursor: pointer;
+    border: solid 4px;
 }
 
 .green {
     background-color: green;
 }
 
+.green-active {
+    background-color: black !important;
+}
+
 .red {
     background-color: red;
+}
+
+.red-active {
+    background-color: black !important;
 }
 
 .blue {
     background-color: blue;
 }
 
+.blue-active {
+    background-color: black !important;
+}
+
 .yellow {
     background-color: yellow;
+}
+
+.yellow-active {
+    background-color: black !important;
 }
 
 .button {
@@ -43,10 +60,6 @@
     border: solid 4px;
     margin-bottom: 10px;
     border-color: #000000;
-}
-
-.color {
-    border: solid 4px;
 }
 
 .level-counter {
