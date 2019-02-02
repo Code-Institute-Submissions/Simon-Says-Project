@@ -21,6 +21,8 @@ body {
 
 .green {
     background-color: green;
+    margin-right: 2px;
+    margin-bottom: 2px;
 }
 
 .green-active {
@@ -29,6 +31,8 @@ body {
 
 .red {
     background-color: red;
+    margin-left: 2px;
+    margin-bottom: 2px;
 }
 
 .red-active {
@@ -37,6 +41,8 @@ body {
 
 .blue {
     background-color: blue;
+    margin-left: 2px;
+    margin-top: 2px;
 }
 
 .blue-active {
@@ -45,6 +51,8 @@ body {
 
 .yellow {
     background-color: yellow;
+    margin-right: 2px;
+    margin-top: 2px;
 }
 
 .yellow-active {
