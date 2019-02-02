@@ -79,4 +79,10 @@ body {
     font-size: 19px;
 }
 
+/* HOVERS */
+.button:hover {
+    background-color: white;
+    color: black;
+}
+
 
