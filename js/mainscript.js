@@ -44,11 +44,11 @@ function playerSequenceCorrect() {
 // GENERATE ERROR
 function generateError() {
     console.log("error");
-    $(".level-counter").text("--");
     let counter = 0;
     let myError = setInterval(function() {
+        $(".level-counter").text("--");
         counter++;
-        if(counter == 3) {
+        if (counter == 3) {
             $(".level-counter").text(level);
         }
     }, 1000);
