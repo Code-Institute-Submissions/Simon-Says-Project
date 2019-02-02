@@ -46,7 +46,7 @@ function generateError() {
     console.log("error");
     let counter = 0;
     let myError = setInterval(function() {
-        $(".level-counter").text("--");
+        $(".level-counter").text("WRONG!");
         counter++;
         if (counter == 3) {
             $(".level-counter").text(level);
