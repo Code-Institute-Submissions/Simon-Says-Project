@@ -1,3 +1,9 @@
+// CONSTANTS AND VARIABLES
+
+let gameMemory = [0, 2, 2];
+let playerMemory = [];
+const numberOfLevel = 3;
+
 // START GAME
 $(document).ready(function() {
     $('.start').click(function() {
@@ -35,12 +41,19 @@ function playerSequenceCorrect() {
     return true;
 }
 
+// GENERATE ERROR
+function generateError() {
+    console.log("error");
+    $(".level-counter").text("--");
+    let counter = 0;
+    let myError = setInterval(function() {
+        counter++;
+        if(counter == 3) {
+            $(".level-counter").text(level);
+        }
+    }, 1000);
+}
 
-
-// CONSTANTS AND VARIABLES
-
-let gameMemory = [0, 2, 2];
-let playerMemory = [];
 
 // const audio1 = new Audio('../audio/simonSound1.mp3');
 // const audio2 = new Audio('../audio/simonSound2.mp3');
