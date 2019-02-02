@@ -19,7 +19,7 @@ $(document).ready(function() {
         addClassSound(id, color);
         // check player sequence
         if (!playerSequenceCorrect()) {
-            displayError();
+            generateError();
             playerMemory = [];
         }
         // check end of sequence
@@ -50,8 +50,11 @@ function generateError() {
         counter++;
         if (counter == 3) {
             $(".level-counter").text(level);
+            clearInterval(myError);
+            playerMemory = [];
+            counter = 0;
         }
-    }, 1000);
+    }, 600);
 }
 
 
