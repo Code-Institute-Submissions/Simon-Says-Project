@@ -1,15 +1,15 @@
 // CONSTANTS AND VARIABLES
 
-let gameMemory = [0, 2, 2];
+let gameMemory = [];
 let playerMemory = [];
-const numberOfLevel = 3;
+const numberOfLevel = 12;
 
 // START GAME
 $(document).ready(function() {
     $('.start').click(function() {
         level++;
-        startGame()
-    })
+        startGame();
+    });
     // Player Listener
     $(".pad").click(function() {
         id = $(this).attr("id");
@@ -23,10 +23,14 @@ $(document).ready(function() {
             playerMemory = [];
         }
         // check end of sequence
-        if (playerMemory.length == gameMemory.length) {
+        if (playerMemory.length == gameMemory.length && playerMemory.length < numberOfLevel) {
             level++;
             playerMemory = [];
             startGame();
+        }
+        // check for winners
+        if (gameMemory.length == numberOfLevel) {
+            $(".level-counter").text("WINNER!");
         }
     });
 });
@@ -47,6 +51,7 @@ function generateError() {
     let counter = 0;
     let myError = setInterval(function() {
         $(".level-counter").text("WRONG!");
+        audioError.play();
         counter++;
         if (counter == 3) {
             $(".level-counter").text(level);
@@ -58,11 +63,7 @@ function generateError() {
 }
 
 
-// const audio1 = new Audio('../audio/simonSound1.mp3');
-// const audio2 = new Audio('../audio/simonSound2.mp3');
-// const audio3 = new Audio('../audio/simonSound3.mp3');
-// const audio4 = new Audio('../audio/simonSound4.mp3');
-// const audio5 = new Audio('../audio/Game_Failure_Sound.mp3');
+const audioError = new Audio('../audio/Game_Failure_Sound.mp3');
 
 let gameSounds = [
     '../audio/simonSound1.mp3',
@@ -86,7 +87,7 @@ let blue = $('.blue');
 function startGame() {
     console.log(level);
     $('.level-counter').text(level);
-    // randomNumber();
+    randomNumber();
     let i = 0;
     let myInterval = setInterval(function() {
         id = gameMemory[i];
@@ -109,7 +110,7 @@ function randomNumber() {
 // ADD TEMPORARY CLASS AND SOUND
 function addClassSound(id, color) {
     $("#" + id).addClass(color + "-active");
-    // playSound(id)
+    playSound(id);
     setTimeout(function() {
         $("#" + id).removeClass(color + "-active");
     }, 500);
@@ -117,19 +118,6 @@ function addClassSound(id, color) {
 
 // PLAY GAME SOUNDS
 function playSound(id) {
-
+    let sound = new Audio(gameSounds[id]);
+    sound.play();
 }
-
-// EXPERIMENTAL DIV FOR TESTING OUT THE FUNCTIONALITY OF JQUERY
-
-$(".experimental").mouseenter(function() {
-    $(this).css("background-color", "yellow");
-});
-
-$(".experimental").mouseleave(function() {
-    $(this).css("background-color", "red");
-});
-
-$("panels").click(function() {
-    flash();
-});
