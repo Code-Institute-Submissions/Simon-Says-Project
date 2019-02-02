@@ -4,7 +4,38 @@ $(document).ready(function() {
         level++;
         startGame()
     })
-})
+    // Player Listener
+    $(".pad").click(function() {
+        id = $(this).attr("id");
+        color = $(this).attr("class").split(" ")[1];
+        playerMemory.push(id);
+        console.log(id + " " + color);
+        addClassSound(id, color);
+        // check player sequence
+        if (!playerSequenceCorrect()) {
+            displayError();
+            playerMemory = [];
+        }
+        // check end of sequence
+        if (playerMemory.length == gameMemory.length) {
+            level++;
+            playerMemory = [];
+            startGame();
+        }
+    });
+});
+
+// Comparing player sequence with game memory
+function playerSequenceCorrect() {
+    for (let i = 0; i < playerMemory.length; i++) {
+        if (playerMemory[i] != gameMemory[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
 
 // CONSTANTS AND VARIABLES
 
@@ -43,11 +74,11 @@ function startGame() {
     let i = 0;
     let myInterval = setInterval(function() {
         id = gameMemory[i];
-        color = $('#'+id).attr("class").split(" ")[1];
-        console.log(id+" "+color);
+        color = $('#' + id).attr("class").split(" ")[1];
+        console.log(id + " " + color);
         addClassSound(id, color);
         i++;
-        if(i == gameMemory.length) {
+        if (i == gameMemory.length) {
             clearInterval(myInterval);
         }
     }, 1000);
@@ -61,10 +92,10 @@ function randomNumber() {
 
 // ADD TEMPORARY CLASS AND SOUND
 function addClassSound(id, color) {
-    $("#"+id).addClass(color+"-active");
+    $("#" + id).addClass(color + "-active");
     // playSound(id)
     setTimeout(function() {
-        $("#"+id).removeClass(color+"-active");
+        $("#" + id).removeClass(color + "-active");
     }, 500);
 }
 
@@ -82,12 +113,6 @@ $(".experimental").mouseenter(function() {
 $(".experimental").mouseleave(function() {
     $(this).css("background-color", "red");
 });
-
-function flash() {
-    $("panels").mousedown(function() {
-        $(this).css("background-color", "black");
-    });
-}
 
 $("panels").click(function() {
     flash();
