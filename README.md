@@ -18,6 +18,8 @@ I believe my design makes more sense for a digital game.
 
 ### **1.Level counter**
 
+![Simon Leve Counter](https://i.imgur.com/HiYtsyD.jpg "Level Counter")
+
 The level counter is a simple 'screen' at the top of the game. It has the numbers 00 by default, indicating that the final level of the game is double digits.
 I have programmed it to say the words 'WRONG' and 'WINNER' when appropriate.
 
@@ -27,6 +29,12 @@ As is traditional in the 'Simon Says' game, it is made of four different pads, e
 Most developers choose to have each button's colour turn a slightly darker shade when the button is activated. From my observation, that is a poor design. It might make sense in a physical version of the game, but it is barely noticeable on the screen of a computer / mobile device. I chose to have the pads turn black when initiated. It is something that I saw on a copycat of 'Simon' called 'Circles' - a mobile app game.
 
 ### **3. Start Button**
+
+*Normal state of the start button*
+![Simon Start Button Normal State](https://i.imgur.com/iJ9v03l.jpg "Start Button Normal State")
+
+*Hovered state of the start button*
+![Simon Start Button Hovered State](https://i.imgur.com/0rOWPhR.jpg "Start Button Hovered State")
 
 The start button initiates the game's sequence. Some versions of the game online can be seen with the game starting as soon as the player enters the site / app, but I decided to leave it for the player to decide when to begin playing (by having them click the Start button manually).
 The button has a simple hover design, where both text and background color change upon hovering. This has been achieved with pure CSS.
