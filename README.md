@@ -33,11 +33,7 @@ The button has a simple hover design, where both text and background color chang
 
 ### **Technologies Used**
 
-*Bootstrap 4*
-*HTML*
-*CSS*
-*JavaScript*
-*jQuery*
+*Bootstrap 4* - *HTML* - *CSS* - *JavaScript* - *jQuery*
 
 ### **Deployment**
 
