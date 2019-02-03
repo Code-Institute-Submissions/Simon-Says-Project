@@ -1,8 +1,4 @@
-<center>
-<h1>
-<b>SIMON SAYS</b>
-</h1>
-</center>
+#**SIMON SAYS**
 
 <p>
 This project represents a digital version of the popular 'Simon Says' game.
