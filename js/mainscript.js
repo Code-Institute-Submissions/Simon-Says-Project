@@ -63,7 +63,7 @@ function generateError() {
 }
 
 
-const audioError = new Audio('../audio/Game_Failure_Sound.mp3');
+const audioError = new Audio('https://s0.vocaroo.com/media/download_temp/Vocaroo_s0J0jaOvdSkU.mp3');
 
 let gameSounds = [
     'https://s3.amazonaws.com/freecodecamp/simonSound1.mp3',
