@@ -31,9 +31,11 @@ Most developers choose to have each button's colour turn a slightly darker shade
 ### **3. Start Button**
 
 *Normal state of the start button*
+
 ![Simon Start Button Normal State](https://i.imgur.com/iJ9v03l.jpg "Start Button Normal State")
 
 *Hovered state of the start button*
+
 ![Simon Start Button Hovered State](https://i.imgur.com/0rOWPhR.jpg "Start Button Hovered State")
 
 The start button initiates the game's sequence. Some versions of the game online can be seen with the game starting as soon as the player enters the site / app, but I decided to leave it for the player to decide when to begin playing (by having them click the Start button manually).
