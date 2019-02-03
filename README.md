@@ -6,6 +6,8 @@ The game was built with HTML, CSS and JavaScript, with jQuery as an additional l
 
 It is a memory game; It is designed to have 12 levels.
 
+The game's link is: https://vesss.github.io/Simon-Says-Project/
+
 ## **UX** 
 
 The UX was made even simpler than the real game. I decided not to have a power (ON / OFF) button, as it seemed very counter-intuitive when I personally had to use it myself.
