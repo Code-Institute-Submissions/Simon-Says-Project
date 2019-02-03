@@ -2,7 +2,7 @@
 
 let gameMemory = [];
 let playerMemory = [];
-const numberOfLevel = 12;
+const numberOfLevel = 12; // The game runs for 12 levels.
 
 // START GAME
 $(document).ready(function() {
