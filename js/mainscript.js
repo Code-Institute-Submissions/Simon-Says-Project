@@ -66,10 +66,10 @@ function generateError() {
 const audioError = new Audio('../audio/Game_Failure_Sound.mp3');
 
 let gameSounds = [
-    'https://raw.githubusercontent.com/Vesss/Simon-Says-Project/master/audio/simonSound1.mp3',
-    '../audio/simonSound2.mp3',
-    '../audio/simonSound3.mp3',
-    '../audio/simonSound4.mp3',
+    'https://s3.amazonaws.com/freecodecamp/simonSound1.mp3',
+    'https://s3.amazonaws.com/freecodecamp/simonSound2.mp3',
+    'https://s3.amazonaws.com/freecodecamp/simonSound3.mp3',
+    'https://s3.amazonaws.com/freecodecamp/simonSound4.mp3',
 ];
 
 let id = 0;
