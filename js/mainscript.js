@@ -76,11 +76,6 @@ let id = 0;
 let color = 0;
 let level = 0;
 
-let green = $('.green');
-let red = $('.red');
-let yellow = $('.yellow');
-let blue = $('.blue');
-
 // FUNCTIONS
 
 // GAME SEQUENCE
