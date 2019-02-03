@@ -15,10 +15,12 @@ FEATURES
 1. Level Counter
 •	The level counter is a simple ‘screen’ at the top of the game. It has the numbers 00 by default, indicating that the final level of the game is a double digits one.
 I have also programmed it to say the words ‘WINNER!’ and ‘WRONG!’, when appropriate.
+
 2. Game Pads (Colours)
 •	As is traditional in the “Simon Says” game, it is made of 4 different pads, each one with a unique colour, and each colour / pad has a unique sounds.
 •	Most developers opt out for the choice to have each button’s colour turn a slightly darker shade. In my experience that is a poor design choice, at least in the context of a digital (computer) version of the game, due to the fact that it’s barely noticeable when the colour is initiated. That is why I decided to make my pads (colours) turn black when initiated – something which I also saw in the copy-cat game “Circles.”
 *When the player makes a mistake, the error has its unique sound.
+
 3. Start Button
 •	The start button initiates the game’s sequence. Some versions of the game online can be seen with the game starting as soon as the player enters the site / app, but I decided to leave it for the player to decide when to begin playing (by having them click the Start Button manually).
 
